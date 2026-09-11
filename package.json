@@ -4,9 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "data:ui": "node scripts/build-ui-data.mjs",
+    "data:refresh": "python scripts/asean_pipeline.py all --start 2005 && npm run data:ui",
+    "predev": "npm run data:ui",
     "dev": "vite --host 127.0.0.1 --configLoader runner",
+    "prebuild": "npm run data:ui",
     "build": "tsc -b && vite build --configLoader runner",
     "preview": "vite preview --host 127.0.0.1 --configLoader runner",
+    "pretest": "npm run data:ui",
     "test": "vitest run --configLoader runner"
   },
   "dependencies": {
