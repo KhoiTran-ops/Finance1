@@ -1,0 +1,6 @@
+DATAFLOW,FREQ,INDICATOR,ECONOMY_CODE,TIME_PERIOD,OBS_VALUE,UNIT,UNIT_MULT,DECIMALS,FOOTNOTE,OBS_STATUS,REF_YEAR,BASE_YEAR,DATA_SOURCE,METHODOLOGY
+ADB:DF_NA(1.0),A,NGDP_XDC,SIN,2020,484602,SGD,6,1,,A,Calendar Year,,Singapore Department of Statistics,
+ADB:DF_NA(1.0),A,NGDP_XDC,SIN,2021,592625,SGD,6,1,,A,Calendar Year,,Singapore Department of Statistics,
+ADB:DF_NA(1.0),A,NGDP_XDC,SIN,2022,708983,SGD,6,1,,A,Calendar Year,,Singapore Department of Statistics,
+ADB:DF_NA(1.0),A,NGDP_XDC,SIN,2023,686398,SGD,6,1,,A,Calendar Year,,Singapore Department of Statistics,
+ADB:DF_NA(1.0),A,NGDP_XDC,SIN,2024,765497.5,SGD,6,1,,A,Calendar Year,,Singapore Department of Statistics,

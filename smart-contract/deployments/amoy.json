@@ -1,0 +1,9 @@
+{
+  "network": "amoy",
+  "chainId": 80002,
+  "deployer": "0xd7fd12E79f18231f99068785647EfC95bc683373",
+  "paymentToken": "0xd802C175b40E07dB11E472E9aDA3Aeb3bd7dBCf4",
+  "mockUSDC": "0xd802C175b40E07dB11E472E9aDA3Aeb3bd7dBCf4",
+  "escrowContract": "0x8352BC4b52895278bC89431E4f47f22511BC750f",
+  "deployedAt": "2026-06-13T06:15:53.101Z"
+}

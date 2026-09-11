@@ -1,0 +1,56 @@
+{
+  "retrieved_at": "20260911T072427563129Z",
+  "start": 2005,
+  "requested_end": null,
+  "files": [
+    {
+      "file": "indicators.json",
+      "url": "https://kidb.adb.org/api/v5/sdmx/structure/codelist/ADB/CL_KIDB_INDICATORS/+?format=sdmx-json",
+      "sha256": "9921fed5232595772d996e34cd16abc6f50c89a22e0df77230a83d3ebb455181",
+      "content_type": "application/json"
+    },
+    {
+      "file": "countries.json",
+      "url": "https://kidb.adb.org/api/v5/sdmx/structure/codelist/ADB/CL_ECONOMY_CODES/+?format=sdmx-json",
+      "sha256": "ecebed0225c7a47e8d5096e9efd471e792c03e108637743e0baafa88b8d29835",
+      "content_type": "application/json"
+    },
+    {
+      "file": "statuses.json",
+      "url": "https://kidb.adb.org/api/v5/sdmx/structure/codelist/all/all/+?format=sdmx-json",
+      "sha256": "ec715ab403d866a38746c87d72c8bf00cbe443371d3cbce895d2c5f85ad3b0f7",
+      "content_type": "application/json"
+    },
+    {
+      "file": "DF_NA.csv",
+      "url": "https://kidb.adb.org/api/v5/sdmx/data/ADB,DF_NA/A.NGDP_XDC+NGDP_R_XDC+NGDPVA_ISIC4_C_XDC+NEGS_XGDP_PS+NIGS_XGDP_PS.VIE+THA+INO+MAL+SIN?startPeriod=2005&format=sdmx-csv",
+      "sha256": "8d24676edeb318af9da3793eccd726d15919f329b7645a922b8e85ce947745ee",
+      "content_type": "text/csv; charset=utf-8"
+    },
+    {
+      "file": "DF_PPSI.csv",
+      "url": "https://kidb.adb.org/api/v5/sdmx/data/ADB,DF_PPSI/A.LP_PE_NUM_MOP.VIE+THA+INO+MAL+SIN?startPeriod=2005&format=sdmx-csv",
+      "sha256": "89b3843273c1cdb0a46c70f8551f755d2b01bfbad11c24017e7fec1f01a8c242",
+      "content_type": "text/csv; charset=utf-8"
+    },
+    {
+      "file": "DF_GLOB_BOP.csv",
+      "url": "https://kidb.adb.org/api/v5/sdmx/data/ADB,DF_GLOB_BOP/A.BCA_BP6_XGDP_PS.VIE+THA+INO+MAL+SIN?startPeriod=2005&format=sdmx-csv",
+      "sha256": "07d6f2a502829bff3b7370d367f67cc8a56d1433594d0775de12182d32668c8d",
+      "content_type": "text/csv; charset=utf-8"
+    },
+    {
+      "file": "wb_reserves.json",
+      "url": "https://api.worldbank.org/v2/country/VNM;THA;IDN;MYS;SGP/indicator/FI.RES.TOTL.MO?format=json&per_page=20000&date=2005:2026",
+      "sha256": "78457ff596f98d497ca214cc4f411bcbdf38ee053001dc5f5b668ce72ef680db",
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "file": "wb_crosscheck.json",
+      "url": "https://api.worldbank.org/v2/country/SGP/indicator/NY.GDP.MKTP.CN?format=json&per_page=100&date=2020:2024",
+      "sha256": "1fc0a8cb05aea6829d64e761277551c614c0b1f950bf2cd9f6f090732b5958d7",
+      "content_type": "application/json;charset=utf-8"
+    }
+  ],
+  "complete": true
+}

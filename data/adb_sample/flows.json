@@ -1,0 +1,1403 @@
+﻿{
+    "$schema":  "https://json.sdmx.org/2.1/sdmx-json-structure-schema.json",
+    "meta":  {
+                 "id":  "IREF219897",
+                 "prepared":  "2026-09-11T15:21:31+08:00",
+                 "sender":  {
+                                "id":  "ADB"
+                            },
+                 "contentLanguages":  [
+                                          "en"
+                                      ]
+             },
+    "data":  {
+                 "dataflows":  [
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENE(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENE",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Energy",
+                                       "names":  {
+                                                     "en":  "Energy"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENE_COAL(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENE_COAL",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Coal",
+                                       "names":  {
+                                                     "en":  "Coal"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENE_CRUDE(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENE_CRUDE",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Crude petroleum",
+                                       "names":  {
+                                                     "en":  "Crude petroleum"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENE_ELEC(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENE_ELEC",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Electricity",
+                                       "names":  {
+                                                     "en":  "Electricity"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENE_GAS(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENE_GAS",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Natural Gas",
+                                       "names":  {
+                                                     "en":  "Natural Gas"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENE_RET(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENE_RET",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Retail Prices",
+                                       "names":  {
+                                                     "en":  "Retail Prices"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENV(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENV",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Environment",
+                                       "names":  {
+                                                     "en":  "Environment"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENV_LAND(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENV_LAND",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Agriculture Land Use",
+                                       "names":  {
+                                                     "en":  "Agriculture Land Use"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENV_POLL(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENV_POLL",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Deforestation and Pollution",
+                                       "names":  {
+                                                     "en":  "Deforestation and Pollution"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENV_TEMP(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENV_TEMP",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Temperature and Climate-Related Disasters",
+                                       "names":  {
+                                                     "en":  "Temperature and Climate-Related Disasters"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ENV_WATER(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ENV_WATER",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Freshwater Resources",
+                                       "names":  {
+                                                     "en":  "Freshwater Resources"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_ER(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_ER",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Exchange Rates",
+                                       "names":  {
+                                                     "en":  "Exchange Rates"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "The exchange rate determined by national authorities or the rate determined in the legally sanctioned exchange market. It is calculated as an annual average based on the monthly averages (local currency units relative to the US dollar). "
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_EXT(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_EXT",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "External Indebtedness",
+                                       "names":  {
+                                                     "en":  "External Indebtedness"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_EXT_AVE(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_EXT_AVE",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Average terms of new commitments",
+                                       "names":  {
+                                                     "en":  "Average terms of new commitments"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_EXT_DEBT(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_EXT_DEBT",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Debt service transactions during the year",
+                                       "names":  {
+                                                     "en":  "Debt service transactions during the year"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_EXT_TTL(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_EXT_TTL",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Total debt outstanding and disbursed",
+                                       "names":  {
+                                                     "en":  "Total debt outstanding and disbursed"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GLOB(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GLOB",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Globalization",
+                                       "names":  {
+                                                     "en":  "Globalization"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GLOB_BOP(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GLOB_BOP",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Balance of Payments",
+                                       "names":  {
+                                                     "en":  "Balance of Payments"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GLOB_CF(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GLOB_CF",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Capital Flows",
+                                       "names":  {
+                                                     "en":  "Capital Flows"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GLOB_ET(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GLOB_ET",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "External Trade",
+                                       "names":  {
+                                                     "en":  "External Trade"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GLOB_ET_PCT(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GLOB_ET_PCT",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "External Trade (% annual change)",
+                                       "names":  {
+                                                     "en":  "External Trade (% annual change)"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GLOB_FDI(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GLOB_FDI",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Foreign Direct Investment",
+                                       "names":  {
+                                                     "en":  "Foreign Direct Investment"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GLOB_TO(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GLOB_TO",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Tourism",
+                                       "names":  {
+                                                     "en":  "Tourism"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GLOB_TR(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GLOB_TR",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Total Remittances",
+                                       "names":  {
+                                                     "en":  "Total Remittances"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GOV(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GOV",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Government and Governance",
+                                       "names":  {
+                                                     "en":  "Government and Governance"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GOV_FIN(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GOV_FIN",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Government Finance",
+                                       "names":  {
+                                                     "en":  "Government Finance"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_GOV_GVN(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_GOV_GVN",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Governance",
+                                       "names":  {
+                                                     "en":  "Governance"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_IL(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_IL",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "International Liquidity",
+                                       "names":  {
+                                                     "en":  "International Liquidity"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_KIDB(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_KIDB",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "KIDB Indicators",
+                                       "names":  {
+                                                     "en":  "KIDB Indicators"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Dataflow for all KIDB Indicators. Use this to perform queries from across the different dataflows in KIDB"
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_KIDB_ITG(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_KIDB_ITG",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "International Trade in Goods ",
+                                       "names":  {
+                                                     "en":  "International Trade in Goods "
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Dataflow for querying Trade data in KIDB"
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_TRADE_DSD(1.0)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_LFE(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_LFE",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Labor Force and Employment",
+                                       "names":  {
+                                                     "en":  "Labor Force and Employment"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "The labor force is the sum of those employed and unemployed but seeking work. "
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_MF(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_MF",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Money and Finance",
+                                       "names":  {
+                                                     "en":  "Money and Finance"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_MF_FIN(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_MF_FIN",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Finance",
+                                       "names":  {
+                                                     "en":  "Finance"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_MF_MON(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_MF_MON",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Money",
+                                       "names":  {
+                                                     "en":  "Money"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_NA(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_NA",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "National Accounts",
+                                       "names":  {
+                                                     "en":  "National Accounts"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_NA_CONST(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_NA_CONST",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "At Constant Prices",
+                                       "names":  {
+                                                     "en":  "At Constant Prices"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_NA_CURR(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_NA_CURR",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "At Current Prices",
+                                       "names":  {
+                                                     "en":  "At Current Prices"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_NA_CURR_USD(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_NA_CURR_USD",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "At Current Prices ($ million)",
+                                       "names":  {
+                                                     "en":  "At Current Prices ($ million)"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_NA_INV(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_NA_INV",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Investment Financing at Current Prices",
+                                       "names":  {
+                                                     "en":  "Investment Financing at Current Prices"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_PI(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_PI",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Production Index",
+                                       "names":  {
+                                                     "en":  "Production Index"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_PPS_POV(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_PPS_POV",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Poverty Indicators",
+                                       "names":  {
+                                                     "en":  "Poverty Indicators"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_PPS_SOC(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_PPS_SOC",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Social Indicators",
+                                       "names":  {
+                                                     "en":  "Social Indicators"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_PPSI(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_PPSI",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Population, Poverty, and Social Indicators",
+                                       "names":  {
+                                                     "en":  "Population, Poverty, and Social Indicators"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_PPSI_POP(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_PPSI_POP",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Population",
+                                       "names":  {
+                                                     "en":  "Population"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_PRI(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_PRI",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Prices",
+                                       "names":  {
+                                                     "en":  "Prices"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Sustainable Development Goals (SDGs)",
+                                       "names":  {
+                                                     "en":  "Sustainable Development Goals (SDGs)"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "There are 17 Sustainable Development Goals (SDGs) comprising 169 targets to be achieved by 2030. In this section, you can view a brief definition of each goal; read the full story on each SDG, including informative graphics and key trends for indicators with available data; and quickly access a full listing of the indicators associated with each SDG. There is also the option to download a fact sheet on each goal and its indicators. The indicators are presented according to the United Nations SDG global indicator framework."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_01(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_01",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 1 - No Poverty",
+                                       "names":  {
+                                                     "en":  "Goal 1 - No Poverty"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Eliminating extreme poverty is the first objective of the SDGs. To achieve this goal, economies must generate gainful employment opportunities for the poor and vulnerable and provide requisite social protection benefits to them."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_02(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_02",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 2 - Zero Hunger",
+                                       "names":  {
+                                                     "en":  "Goal 2 - Zero Hunger"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Description"
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_03(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_03",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 3 - Good health and well-being",
+                                       "names":  {
+                                                     "en":  "Goal 3 - Good health and well-being"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "While everyone has the right to live healthily throughout their lifetime, providing adequate health care is a significant challenge. Monitoring SDG 3 will require high-quality, timely, and more disaggregated data on health indicators related to reproductive, maternal, and child health; HIV/AIDS; malaria; tuberculosis; and tropical, noncommunicable, and environmental diseases. Ensuring universal health coverage and access to safe, affordable, and effective medicines and vaccines would be a step forward in achieving the targets set for this goal."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_04(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_04",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 4 - Quality Education",
+                                       "names":  {
+                                                     "en":  "Goal 4 - Quality Education"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "SDG 4 emphasizes that, not only is education a human right, but quality education, relevant training, and opportunities for lifelong learning should be accessible to all. Achieving SDG 4 requires an improvement in the quality of education across the social spectrum, to ensure access to economic opportunities and better income prospects for all."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_05(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_05",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 5 - Gender equality",
+                                       "names":  {
+                                                     "en":  "Goal 5 - Gender equality"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Gender equality is at the core of the SDGs and eliminating discrimination against women due to unfair social norms, general attitudes, and other factors requires women and girls to feel empowered."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_06(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_06",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 6 - Clean water and sanitation",
+                                       "names":  {
+                                                     "en":  "Goal 6 - Clean water and sanitation"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Water supply, sanitation, and hygiene are interlinked with poverty, health, gender, environment, and governance. Improper management of water and sanitation services can put people at risk of contracting a wide range of preventable diseases. SDG 6 aims for universal access to safe water and sanitation as well as promoting adequate hygiene services."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_07(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_07",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 7 - Affordable and clean energy",
+                                       "names":  {
+                                                     "en":  "Goal 7 - Affordable and clean energy"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "The pursuit of SDG 7 is a path toward broader access to affordable and clean energy and improved use of renewable energy by 2030. This requires expanding access to electricity and clean cooking fuels, building sustainable infrastructure, and increasing the financial capacity and willingness of societies to embrace new technologies."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_08(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_08",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 8 - Decent work and economic growth",
+                                       "names":  {
+                                                     "en":  "Goal 8 - Decent work and economic growth"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Economies aim for broad-based, inclusive, and sustainable economic growth to provide better prospects, welfare, and opportunities for their citizens. Providing access to better jobs is essential to ensure sustainable economic growth and development. It is the core objective of SDG 8. Sustaining high levels of economic growth, achieving full and productive employment, and ensuring decent work for all will be challenging if economies continue to deplete their natural resources and do not leverage technology."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_09(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_09",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 9 - Industry, Innovation, and Infrastructure",
+                                       "names":  {
+                                                     "en":  "Goal 9 - Industry, Innovation, and Infrastructure"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Amid the vastly changing landscape in manufacturing and trade brought about by technological innovations, SDG 9 seeks to strengthen supply chains and retrofit industries across economies. Investments in smart infrastructure and innovation are also needed to stimulate economic activity that ensures sustainable industrialization while achieving growth in wealth and productivity."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_10(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_10",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 10 - Reduced inequality",
+                                       "names":  {
+                                                     "en":  "Goal 10 - Reduced inequality"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Across Asia and the Pacific, there remains unequal access to opportunities, public goods, and essential services among various groups. Inequality created by factors such as level of wealth, sex, residence, disability status, ethnicity, and migration status can create barriers to social mobility and economic growth. SDG 10 aims to provide more equitable access to opportunities, so that all people can be given a chance to participate in growth processes and fully realize their potential."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_11(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_11",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 11 - Sustainable cities and communities",
+                                       "names":  {
+                                                     "en":  "Goal 11 - Sustainable cities and communities"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  "Nearly half the population of Asia and the Pacific resides in urban areas. As cities continue to be engines of economic growth and offer opportunities for improved welfare, urban populations in the region are expected to overtake those of rural areas by 2022 (United Nations Department of Economic and Social Affairs 2018). SDG 11, which aims to ensure access to safe housing and affordable transport and to build resilience in cities for all, will only be achieved if urban planning and management efforts are scaled up. These efforts must address the need to convert informal settlements into sustainable and resilient living communities and to bring air-pollution levels to internationally acceptable standards."
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_12(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_12",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 12 - Responsible consumption and production",
+                                       "names":  {
+                                                     "en":  "Goal 12 - Responsible consumption and production"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_13(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_13",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 13 - Climate action",
+                                       "names":  {
+                                                     "en":  "Goal 13 - Climate action"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_14(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_14",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 14 - Life below water",
+                                       "names":  {
+                                                     "en":  "Goal 14 - Life below water"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_15(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_15",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 15 - Life on land",
+                                       "names":  {
+                                                     "en":  "Goal 15 - Life on land"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_16(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_16",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 16 - Peace, justice and strong institutions",
+                                       "names":  {
+                                                     "en":  "Goal 16 - Peace, justice and strong institutions"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_SDG_17(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_SDG_17",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Goal 17 - Partnership for the goals",
+                                       "names":  {
+                                                     "en":  "Goal 17 - Partnership for the goals"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_TC(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_TC",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Transport and Communications",
+                                       "names":  {
+                                                     "en":  "Transport and Communications"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_TC_COMM(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_TC_COMM",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Communication",
+                                       "names":  {
+                                                     "en":  "Communication"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   },
+                                   {
+                                       "links":  [
+                                                     {
+                                                         "rel":  "self",
+                                                         "type":  "dataflow",
+                                                         "urn":  "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ADB:DF_TC_TRANS(1.0)"
+                                                     }
+                                                 ],
+                                       "agencyID":  "ADB",
+                                       "id":  "DF_TC_TRANS",
+                                       "version":  "1.0",
+                                       "isExternalResource":  false,
+                                       "name":  "Transport",
+                                       "names":  {
+                                                     "en":  "Transport"
+                                                 },
+                                       "descriptions":  {
+                                                            "en":  null
+                                                        },
+                                       "structure":  "urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ADB:KIDB_DSD(1.1)"
+                                   }
+                               ]
+             }
+}
