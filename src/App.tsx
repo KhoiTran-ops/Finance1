@@ -5,7 +5,7 @@ import StoryNavigation from './components/StoryNavigation';
 import CountryScene from './components/CountryScene';
 import MethodPanel from './components/MethodPanel';
 import {LineChart,RecoveryChart,ScatterPlot,SnapshotChart} from './components/Charts';
-import {countryLabel} from './data/model';
+import {countryLabel,meta} from './data/model';
 function initial(){const n=scenes.findIndex(s=>s.id===location.hash.slice(1));return n<0?0:n}
 export default function App(){
  const [index,setIndex]=useState(initial);
@@ -17,12 +17,12 @@ export default function App(){
  return <div className="app"><header>
   <a href="#landing" className="brand" onClick={()=>go(0)}>atlas<span> / </span><small>ASIA · FINANCIAL STORIES</small></a>
   <div className="header-actions"><button className={index===0?'selected':''} onClick={()=>go(0)}>Bản đồ</button><button onClick={()=>go(9)}>Phương pháp ↗</button><button onClick={fullscreen} aria-label="Bật hoặc tắt toàn màn hình">⛶ <span>Trình chiếu</span></button></div>
- </header><div className="demo-banner"><span className="demo-badge">DEMO DATA</span><span>Bản thiết kế tương tác · Chưa có dữ liệu tài chính thật · Không phải kết quả nghiên cứu</span></div>
+ </header><div className="demo-banner"><span className="demo-badge">ADB DATA</span><span>{meta.title} · Kỳ {meta.period} · Dữ liệu thiếu không được nội suy</span></div>
  {notice&&<div role="status" className="notice">{notice}</div>}
  <main key={scene.id} className={`scene scene-${scene.id} ${scene.country?'country-scene':''}`}>
  {index===0?<><ASEANMap onSelect={id=>go(scenes.findIndex(s=>s.country===id))}/></>:<>
-  <section className="story-copy"><button className="back-map" onClick={()=>go(0)}>← Trở về bản đồ</button><div className="eyebrow">{scene.eyebrow}</div><h1>{scene.country?countryLabel(scene.country):scene.title}</h1><p className="description">{scene.description}</p><div className="editor-note"><span>{scene.country?'DASHBOARD / ĐANG CHỜ NỘI DUNG':'GHI CHÚ CHO NGƯỜI XEM'}</span><p>Các đường biểu đồ là mô phỏng. Chỉ tiêu, dữ liệu và nhận định tài chính sẽ được bổ sung sau khi xác minh nguồn.</p></div><div className="chapter-index">{String(index).padStart(2,'0')}<span> / FINANCIAL ATLAS</span></div></section>
-  <section className="visual-stage" aria-label={`Nội dung cảnh ${scene.label}`}>{scene.country?<CountryScene id={scene.country}/>:scene.id==='methodology'?<MethodPanel/>:<div className="chart-panel">{scene.id==='overview'?<><LineChart/><SnapshotChart/></>:scene.id==='comparison'?<RecoveryChart/>:<ScatterPlot/>}<div className="source">Nguồn: dữ liệu mô phỏng nội bộ · Chưa kết nối ADB</div></div>}</section>
+  <section className="story-copy"><button className="back-map" onClick={()=>go(0)}>← Trở về bản đồ</button><div className="eyebrow">{scene.eyebrow}</div><h1>{scene.country?countryLabel(scene.country):scene.title}</h1><p className="description">{scene.description}</p><div className="editor-note"><span>{scene.country?'DASHBOARD / DỮ LIỆU QUAN SÁT':'GHI CHÚ CHO NGƯỜI XEM'}</span><p>Biểu đồ sử dụng dữ liệu ADB đã qua pipeline kiểm tra. Các chỉ số được mô tả theo nguồn và không được diễn giải như quan hệ nhân quả.</p></div><div className="chapter-index">{String(index).padStart(2,'0')}<span> / FINANCIAL ATLAS</span></div></section>
+  <section className="visual-stage" aria-label={`Nội dung cảnh ${scene.label}`}>{scene.country?<CountryScene id={scene.country}/>:scene.id==='methodology'?<MethodPanel/>:<div className="chart-panel">{scene.id==='overview'?<><LineChart/><SnapshotChart/></>:scene.id==='comparison'?<RecoveryChart/>:<ScatterPlot/>}<div className="source">Nguồn: <a href={meta.sourceUrl} target="_blank" rel="noreferrer">ADB Key Indicators Database</a>{scene.id==='surprise'?' · Năm gần nhất có dữ liệu':''}</div></div>}</section>
  </>}
  </main><StoryNavigation index={index} onChange={go}/></div>
 }

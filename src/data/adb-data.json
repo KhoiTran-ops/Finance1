@@ -1,0 +1,2344 @@
+{
+  "metadata": {
+    "mode": "observed-data",
+    "title": "Dữ liệu kinh tế ASEAN từ ADB",
+    "source": "Asian Development Bank (ADB), Key Indicators Database",
+    "supplementalSource": "World Bank WDI — chỉ tiêu dự trữ ngoại hối theo tháng nhập khẩu",
+    "sourceUrl": "https://kidb.adb.org/",
+    "retrievedAt": "20260911T072427563129Z",
+    "period": "2012–2025",
+    "baseYear": 2019,
+    "primaryIndicator": "trade_openness",
+    "notes": "Ô trống được giữ là null; không nội suy và không thay bằng 0."
+  },
+  "indicators": {
+    "manufacturing_pct": {
+      "label": "Chế biến, chế tạo",
+      "unit": "% GDP",
+      "source": "ADB"
+    },
+    "exports_pct": {
+      "label": "Xuất khẩu",
+      "unit": "% GDP",
+      "source": "ADB"
+    },
+    "imports_pct": {
+      "label": "Nhập khẩu",
+      "unit": "% GDP",
+      "source": "ADB"
+    },
+    "current_account_pct": {
+      "label": "Cán cân vãng lai",
+      "unit": "% GDP",
+      "source": "ADB"
+    },
+    "reserves_months": {
+      "label": "Dự trữ ngoại hối",
+      "unit": "tháng nhập khẩu",
+      "source": "World Bank WDI (nguồn bổ sung)"
+    },
+    "trade_openness": {
+      "label": "Độ mở thương mại",
+      "unit": "% GDP",
+      "source": "Tính từ ADB: xuất khẩu + nhập khẩu"
+    }
+  },
+  "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "countries": [
+    {
+      "id": "VN",
+      "name": "Việt Nam",
+      "color": "#a37219",
+      "iso3": "VNM",
+      "values": [
+        74.8154,
+        79.4432,
+        82.2144,
+        87.9845,
+        88.2852,
+        97.7389,
+        99.9755,
+        100,
+        99.1146,
+        113.3426,
+        111.2015,
+        100.1769,
+        105.7814,
+        115.5628
+      ],
+      "metrics": {
+        "manufacturing_pct": [
+          {
+            "year": 2012,
+            "value": 20.2740938229,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 20.6874518291,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 20.3712278956,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 20.960090528,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 21.4882532737,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 22.6271224304,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 23.3671682949,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 23.7867173552,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 23.9472422134,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 24.4593727021,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 24.6563821596,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 24.1127938518,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 24.3330813944,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 24.5280159576,
+            "status": "observed"
+          }
+        ],
+        "exports_pct": [
+          {
+            "year": 2012,
+            "value": 63.47392449,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 66.80044615,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 69.59857507,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 72.92285161,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 74.10728551,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 81.76252212,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 84.42345602,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 85.1575871,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 84.38159765,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 93.85,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 93.42012924,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 86.73666355,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 90.59622006,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 98.24440786,
+            "status": "observed"
+          }
+        ],
+        "imports_pct": [
+          {
+            "year": 2012,
+            "value": 59.75019225,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 64.04590912,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 65.81194553,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 71.99137627,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 71.30222164,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 79.21756138,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 80.24048073,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 79.54662743,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 78.86426525,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 92.83,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 89.73348998,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 78.25892146,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 83.63017933,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 92.09240095,
+            "status": "observed"
+          }
+        ],
+        "current_account_pct": [
+          {
+            "year": 2012,
+            "value": 4.7,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 3.6,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 3.7,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": -0.686615143,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 0.341506673,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": -0.578275824,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 2.235683745,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 3.730949823,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 4.293920738,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": -1.242026714,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 0.324336446,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 6.362748354,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 6.380421197,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 6.44189186,
+            "status": "observed"
+          }
+        ],
+        "reserves_months": [
+          {
+            "year": 2012,
+            "value": 2.48702822539,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 2.14652156786,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 2.5363346851,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 1.85037257938,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 2.22398532927,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 2.46290138785,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 2.52957991101,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 3.3667935294,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 3.97829560887,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 3.68607429496,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 2.65055544762,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 3.01759407672,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 2.37407817485,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": null,
+            "status": "missing"
+          }
+        ],
+        "trade_openness": [
+          {
+            "year": 2012,
+            "value": 123.22411674,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 130.84635527,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 135.4105206,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 144.91422788,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 145.40950715,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 160.9800835,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 164.66393675,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 164.70421453,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 163.2458629,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 186.68,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 183.15361922,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 164.99558501,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 174.22639939,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": 190.33680881,
+            "status": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ID",
+      "name": "Indonesia",
+      "color": "#497f76",
+      "iso3": "IDN",
+      "values": [
+        131.7721,
+        129.2592,
+        127.7784,
+        111.4539,
+        99.4514,
+        104.5916,
+        114.4748,
+        100,
+        87.6272,
+        106.8486,
+        120.8274,
+        110.1858,
+        113.7722,
+        115.317
+      ],
+      "metrics": {
+        "manufacturing_pct": [
+          {
+            "year": 2012,
+            "value": 21.4509550554,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 21.0286886817,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 21.0751760506,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 20.985787431,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 20.5229746805,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 20.1600223614,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 19.8631933836,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 19.7035390876,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 19.8664218856,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 19.2433202959,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 18.336177108,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 18.6674487917,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 18.9840040044,
+            "status": "provisional"
+          },
+          {
+            "year": 2025,
+            "value": 19.0651099809,
+            "status": "provisional"
+          }
+        ],
+        "exports_pct": [
+          {
+            "year": 2012,
+            "value": 24.59437879,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 23.92357638,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 23.66598459,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 21.16017926,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 19.08899385,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 20.17730444,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 21.0027465,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 18.59152779,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 17.33116829,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 21.41655564,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 24.50291169,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 21.80856324,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 22.30964878,
+            "status": "provisional"
+          },
+          {
+            "year": 2025,
+            "value": 22.8465483,
+            "status": "provisional"
+          }
+        ],
+        "imports_pct": [
+          {
+            "year": 2012,
+            "value": 24.98851951,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 24.7137963,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 24.41419099,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 20.77746098,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 18.33234795,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 19.17819264,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 22.07156246,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 19.03624974,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 15.64100712,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 18.78820264,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 20.96175851,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 19.6519133,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 20.50028911,
+            "status": "provisional"
+          },
+          {
+            "year": 2025,
+            "value": 20.54465877,
+            "status": "provisional"
+          }
+        ],
+        "current_account_pct": [
+          {
+            "year": 2012,
+            "value": -2.659581268,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": -3.190590139,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": -3.088885226,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": -2.033144224,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": -1.818386332,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": -1.595056091,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": -2.943280185,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": -2.705647993,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": -0.417850415,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 0.295899026,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 1.001692526,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": -0.148905707,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": -0.614488836,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": -0.100540893,
+            "status": "provisional"
+          }
+        ],
+        "reserves_months": [
+          {
+            "year": 2012,
+            "value": 5.58937942738,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 4.9503184677,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 5.74432339947,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 6.44616105766,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 7.2258880561,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 7.08716242011,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 5.59560758848,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 6.3177743442,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 8.4069748464,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 6.78517585393,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 5.2132207747,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 5.72806559441,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 5.72012468838,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": 5.51085431823,
+            "status": "unknown"
+          }
+        ],
+        "trade_openness": [
+          {
+            "year": 2012,
+            "value": 49.5828983,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 48.63737268,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 48.08017558,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 41.93764024,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 37.4213418,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 39.35549708,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 43.07430896,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 37.62777753,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 32.97217541,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 40.20475828,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 45.4646702,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 41.46047654,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 42.80993789,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": 43.39120707,
+            "status": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TH",
+      "name": "Thái Lan",
+      "color": "#b26e47",
+      "iso3": "THA",
+      "values": [
+        128.18,
+        122.9835,
+        120.1573,
+        112.4082,
+        108.2145,
+        109.582,
+        111.1493,
+        100,
+        89.0353,
+        106.7846,
+        121.0813,
+        117.4154,
+        123.7356,
+        126.1868
+      ],
+      "metrics": {
+        "manufacturing_pct": [
+          {
+            "year": 2012,
+            "value": 27.9727828245,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 27.5886808672,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 27.5734967884,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 27.3740751795,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 27.1442462227,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 27.0148090242,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 26.7128331788,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 25.6215964144,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 25.5648835165,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 27.1593914745,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 27.030330056,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 24.9848484402,
+            "status": "provisional"
+          },
+          {
+            "year": 2024,
+            "value": 24.2392268676,
+            "status": "provisional"
+          },
+          {
+            "year": 2025,
+            "value": 23.7436075361,
+            "status": "provisional"
+          }
+        ],
+        "exports_pct": [
+          {
+            "year": 2012,
+            "value": 70.4,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 68.4,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 68.9,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 66.8,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 66,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 66.3,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 65.41609196,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 59.51889062,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 51.33881897,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 58.42111244,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 65.333832,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 65.51358827,
+            "status": "provisional"
+          },
+          {
+            "year": 2024,
+            "value": 69.67262917,
+            "status": "provisional"
+          },
+          {
+            "year": 2025,
+            "value": 71.14809761,
+            "status": "provisional"
+          }
+        ],
+        "imports_pct": [
+          {
+            "year": 2012,
+            "value": 70.2,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 66.5,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 62.9,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 56.5,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 52.7,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 53.9,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 56.50302132,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 50.17062409,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 46.32362297,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 58.71035974,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 67.47962629,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 63.27877142,
+            "status": "provisional"
+          },
+          {
+            "year": 2024,
+            "value": 66.05230667,
+            "status": "provisional"
+          },
+          {
+            "year": 2025,
+            "value": 67.2655884,
+            "status": "provisional"
+          }
+        ],
+        "current_account_pct": [
+          {
+            "year": 2012,
+            "value": -1.232337205,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": -2.101535084,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 2.858284429,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 6.915817076,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 10.50835426,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 9.631029908,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 5.619863842,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 7.033268678,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 4.182825661,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": -2.118251418,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": -3.462516507,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 1.436618026,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 2.10661048,
+            "status": "provisional"
+          },
+          {
+            "year": 2025,
+            "value": 2.762897536,
+            "status": "provisional"
+          }
+        ],
+        "reserves_months": [
+          {
+            "year": 2012,
+            "value": 7.26906226177,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 6.51019841309,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 6.66361179349,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 7.35463205002,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 8.34136438746,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 8.78162959168,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 7.78824916649,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 8.90152084892,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 12.2043932728,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 9.01100320675,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 7.1172243768,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 7.56658893216,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 7.45570372627,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": 8.02619323823,
+            "status": "unknown"
+          }
+        ],
+        "trade_openness": [
+          {
+            "year": 2012,
+            "value": 140.6,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 134.9,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 131.8,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 123.3,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 118.7,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 120.2,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 121.91911328,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 109.68951471,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 97.66244194,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 117.13147218,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 132.81345829,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 128.79235969,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 135.72493584,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": 138.41368601,
+            "status": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "id": "MY",
+      "name": "Malaysia",
+      "color": "#80769a",
+      "iso3": "MYS",
+      "values": [
+        120.1671,
+        116.0064,
+        112.4229,
+        106.7801,
+        103.146,
+        108.2311,
+        105.9938,
+        100,
+        94.9275,
+        108.9471,
+        119.0171,
+        107.6977,
+        111.9667,
+        112.9656
+      ],
+      "metrics": {
+        "manufacturing_pct": [
+          {
+            "year": 2012,
+            "value": 23.138176292,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 22.8407424206,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 22.8739302431,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 22.2933324025,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 21.7969397965,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 21.8461950799,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 21.5281381982,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 21.4089748963,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 22.2320858424,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 23.3631656355,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 23.338319684,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 23.0075754644,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 22.4937549251,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 22.0755391507,
+            "status": "observed"
+          }
+        ],
+        "exports_pct": [
+          {
+            "year": 2012,
+            "value": 79.299914,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 75.62904,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 73.7935,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 69.44869,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 66.77545,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 70.01174,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 68.55497,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 65.27777,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 61.578,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 70.633,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 76.808,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 68.63,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 71.459,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 72.223,
+            "status": "observed"
+          }
+        ],
+        "imports_pct": [
+          {
+            "year": 2012,
+            "value": 68.54,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 67.09195,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 64.51873,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 61.92138,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 60.12356,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 63.14343,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 61.84765,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 57.7508,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 55.21,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 63.403,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 69.617,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 63.869,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 66.292,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 66.757,
+            "status": "observed"
+          }
+        ],
+        "current_account_pct": [
+          {
+            "year": 2012,
+            "value": 5.16624,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 3.48369,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 4.38826,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 2.98696,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 2.39316,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 2.79061,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 2.23069,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 3.49816,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 4.165770216,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 3.885706978,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 3.188087509,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 1.099122887,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 1.434369097,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 1.573318265,
+            "status": "observed"
+          }
+        ],
+        "reserves_months": [
+          {
+            "year": 2012,
+            "value": 6.96382782005,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 6.66725243911,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 5.6700220201,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 5.50777041075,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 5.64270997828,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 5.5076074113,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 4.91023691554,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 5.26575125944,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 6.26880997379,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 5.18620609619,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 4.32861908088,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 4.77774044018,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 4.45057833503,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": null,
+            "status": "missing"
+          }
+        ],
+        "trade_openness": [
+          {
+            "year": 2012,
+            "value": 147.839914,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 142.72099,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 138.31223,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 131.37007,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 126.89901,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 133.15517,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 130.40262,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 123.02857,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 116.788,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 134.036,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 146.425,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 132.499,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 137.751,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": 138.98,
+            "status": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SG",
+      "name": "Singapore · benchmark",
+      "color": "#65696b",
+      "iso3": "SGP",
+      "values": [
+        113.8452,
+        113.1977,
+        111.1625,
+        101.6035,
+        92.9078,
+        97.2556,
+        100.4317,
+        100,
+        102.0968,
+        100.7092,
+        101.8193,
+        99.815,
+        96.6081,
+        98.7974
+      ],
+      "metrics": {
+        "manufacturing_pct": [
+          {
+            "year": 2012,
+            "value": 19.1168219801,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 17.6384096149,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 17.9997688921,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 18.0893298549,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 17.3698773941,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 18.4782631524,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 20.6143847052,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 19.3067395309,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 19.6581730987,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 20.6115503058,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 19.6980886707,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 16.7319252096,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 16.2580935927,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 17.4295896846,
+            "status": "observed"
+          }
+        ],
+        "exports_pct": [
+          {
+            "year": 2012,
+            "value": 196.7,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 195.1,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 192,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 178.4,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 163.8,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 171,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 177.7,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 176.8,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 181.2,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 181.2,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 185,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 180.4,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 174.7,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 177.9,
+            "status": "observed"
+          }
+        ],
+        "imports_pct": [
+          {
+            "year": 2012,
+            "value": 172.5,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 172,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 168.5,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 151.1,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 137.5,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 144.4,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 148,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 147.5,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 149.9,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 145.4,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 145.2,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 143.3,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 138.6,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 142.5,
+            "status": "observed"
+          }
+        ],
+        "current_account_pct": [
+          {
+            "year": 2012,
+            "value": 17.6,
+            "status": "observed"
+          },
+          {
+            "year": 2013,
+            "value": 15.7,
+            "status": "observed"
+          },
+          {
+            "year": 2014,
+            "value": 18,
+            "status": "observed"
+          },
+          {
+            "year": 2015,
+            "value": 18.7,
+            "status": "observed"
+          },
+          {
+            "year": 2016,
+            "value": 18,
+            "status": "observed"
+          },
+          {
+            "year": 2017,
+            "value": 18.5,
+            "status": "observed"
+          },
+          {
+            "year": 2018,
+            "value": 15.7,
+            "status": "observed"
+          },
+          {
+            "year": 2019,
+            "value": 15.5,
+            "status": "observed"
+          },
+          {
+            "year": 2020,
+            "value": 17.7,
+            "status": "observed"
+          },
+          {
+            "year": 2021,
+            "value": 19.3,
+            "status": "observed"
+          },
+          {
+            "year": 2022,
+            "value": 18.9,
+            "status": "observed"
+          },
+          {
+            "year": 2023,
+            "value": 16.4,
+            "status": "observed"
+          },
+          {
+            "year": 2024,
+            "value": 17.2,
+            "status": "observed"
+          },
+          {
+            "year": 2025,
+            "value": 16.7,
+            "status": "observed"
+          }
+        ],
+        "reserves_months": [
+          {
+            "year": 2012,
+            "value": 5.43623357527,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 5.43683101786,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 5.12342361689,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 5.4163075348,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 5.5906927125,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 5.48780927285,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 4.90921841873,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 4.79837409854,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 6.5266318785,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 5.86539457354,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 3.52234707372,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 4.31234700367,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 4.18192840499,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": 4.38779137884,
+            "status": "unknown"
+          }
+        ],
+        "trade_openness": [
+          {
+            "year": 2012,
+            "value": 369.2,
+            "status": "unknown"
+          },
+          {
+            "year": 2013,
+            "value": 367.1,
+            "status": "unknown"
+          },
+          {
+            "year": 2014,
+            "value": 360.5,
+            "status": "unknown"
+          },
+          {
+            "year": 2015,
+            "value": 329.5,
+            "status": "unknown"
+          },
+          {
+            "year": 2016,
+            "value": 301.3,
+            "status": "unknown"
+          },
+          {
+            "year": 2017,
+            "value": 315.4,
+            "status": "unknown"
+          },
+          {
+            "year": 2018,
+            "value": 325.7,
+            "status": "unknown"
+          },
+          {
+            "year": 2019,
+            "value": 324.3,
+            "status": "unknown"
+          },
+          {
+            "year": 2020,
+            "value": 331.1,
+            "status": "unknown"
+          },
+          {
+            "year": 2021,
+            "value": 326.6,
+            "status": "unknown"
+          },
+          {
+            "year": 2022,
+            "value": 330.2,
+            "status": "unknown"
+          },
+          {
+            "year": 2023,
+            "value": 323.7,
+            "status": "unknown"
+          },
+          {
+            "year": 2024,
+            "value": 313.3,
+            "status": "unknown"
+          },
+          {
+            "year": 2025,
+            "value": 320.4,
+            "status": "unknown"
+          }
+        ]
+      }
+    }
+  ]
+}

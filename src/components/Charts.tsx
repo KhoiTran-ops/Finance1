@@ -1,6 +1,44 @@
-import {countries, years, recovery, type Country} from '../data/model';
-export function Legend(){return <div className="legend">{countries.map(c=><span key={c.id}><i style={{background:c.color}}/>{c.name}</span>)}</div>}
-export function LineChart({country}:{country?:Country}){const series=country?(country.id==='SG'?[country]:[country,countries[4]]):countries;return <><div className="chart-top"><span>CHỈ SỐ MÔ PHỎNG</span><span>2019 = 100</span></div><svg viewBox="0 0 660 310" role="img" aria-label="Đường chỉ số mô phỏng 2019 đến 2024"><title>Dữ liệu demo, không phải số liệu ADB</title>{[80,90,100,110,120].map(v=><g key={v}><line x1="45" x2="610" y1={260-(v-80)*5} y2={260-(v-80)*5} className={v===100?'baseline':'grid'}/><text x="8" y={265-(v-80)*5}>{v}</text></g>)}{years.map((y,i)=><text key={y} x={45+i*110} y="292" textAnchor="middle">{y}</text>)}{series.map(c=><g key={c.id}><polyline fill="none" stroke={c.color} strokeWidth="3" strokeDasharray={c.id==='SG'?'6 6':undefined} points={c.values.map((v,i)=>`${45+i*110},${260-(v-80)*5}`).join(' ')}/>{c.values.map((v,i)=><circle key={i} cx={45+i*110} cy={260-(v-80)*5} r="4" fill={c.color}><title>{c.name}: {years[i]}, {v} (demo)</title></circle>)}</g>)}</svg><Legend/></>}
-export function RecoveryChart(){return <><div className="chart-top"><span>CHÊNH LỆCH ĐIỂM CHỈ SỐ · DEMO</span><span>2024 so với 2019</span></div><div className="bars">{countries.map(c=><div className="bar-row" key={c.id}><span>{c.name}</span><div><div className="bar" style={{width:`${recovery(c)*4}%`,background:c.color}}/></div><b>+{recovery(c)}</b></div>)}</div><p className="chart-note">Đường cơ sở = 100. Thứ tự hiển thị cố định, không phải bảng xếp hạng.</p></>}
-export function ScatterPlot(){return <><div className="chart-top"><span>HAI CHIỀU MÔ PHỎNG</span><span>Không thể suy luận nhân quả</span></div><svg viewBox="0 0 660 350" role="img" aria-label="Biểu đồ phân tán với cả hai trục là dữ liệu giả"><text x="45" y="22">Y: chỉ số mô phỏng 2024</text>{[100,110,120].map(v=><g key={v}><line className="grid" x1="45" x2="610" y1={280-(v-100)*10} y2={280-(v-100)*10}/><text x="5" y={285-(v-100)*10}>{v}</text></g>)}{[0,25,50,75,100].map(v=><text key={v} x={45+v*5.5} y="306">{v}</text>)}{countries.map(c=><g key={c.id}><circle cx={45+c.x*5.5} cy={280-(c.y-100)*10} r="9" fill={c.color}/><text x={45+c.x*5.5} y={260-(c.y-100)*10} textAnchor="middle">{c.id==='SG'?'SG · benchmark':c.id}</text></g>)}<text x="330" y="340" textAnchor="middle">X: biến giả định (0–100), chưa gắn chỉ tiêu kinh tế</text></svg><Legend/></>}
-export function SnapshotChart(){return <><div className="chart-top"><span>ẢNH CHỤP MÔ PHỎNG</span><span>2024 · mốc 2019 = 100</span></div><div className="snapshots">{countries.map(c=><div key={c.id}><span>{c.name}</span><strong style={{color:c.color}}>{c.values.at(-1)}</strong><svg viewBox="0 0 100 35" aria-label={`Đường mô phỏng ${c.name}`}><polyline points={c.values.map((v,i)=>`${i*20},${35-(v-85)*.9}`).join(' ')} fill="none" stroke={c.color} strokeWidth="2"/></svg></div>)}</div></>}
+import {countries,formatValue,indicators,latestMetric,meta,recovery,years,type Country} from '../data/model';
+
+const left=52,right=610,top=28,bottom=258;
+const xAt=(index:number)=>left+(index*Math.max(1,right-left))/Math.max(1,years.length-1);
+
+function extent(values:(number|null)[],padding=.08){
+ const finite=values.filter((value):value is number=>value!==null&&Number.isFinite(value));
+ const low=Math.min(...finite),high=Math.max(...finite),range=Math.max(high-low,10);
+ return [Math.floor((low-range*padding)/10)*10,Math.ceil((high+range*padding)/10)*10] as const;
+}
+
+function pathSegments(values:(number|null)[],yAt:(value:number)=>number){
+ const segments:string[]=[];let current:string[]=[];
+ values.forEach((value,index)=>{if(value===null){if(current.length>1)segments.push(current.join(' '));current=[]}else current.push(`${xAt(index)},${yAt(value)}`)});
+ if(current.length>1)segments.push(current.join(' '));
+ return segments;
+}
+
+export function Legend({series=countries}:{series?:Country[]}){return <div className="legend">{series.map(c=><span key={c.id}><i style={{background:c.color}}/>{c.name}</span>)}</div>}
+
+export function LineChart({country}:{country?:Country}){
+ const series=country?(country.id==='SG'?[country]:[country,countries.find(item=>item.id==='SG')!]):countries;
+ const [min,max]=extent(series.flatMap(item=>item.values));
+ const yAt=(value:number)=>bottom-((value-min)/(max-min))*(bottom-top);
+ const ticks=Array.from({length:5},(_,index)=>min+((max-min)*index)/4);
+ const shownYears=years.filter((_,index)=>index===0||index===years.length-1||years[index]===meta.baseYear||index%3===0);
+ return <><div className="chart-top"><span>ĐỘ MỞ THƯƠNG MẠI · CHỈ SỐ</span><span>{meta.baseYear} = 100</span></div><svg viewBox="0 0 660 310" role="img" aria-label={`Chỉ số độ mở thương mại từ ${years[0]} đến ${years.at(-1)}`}><title>Dữ liệu ADB, xuất khẩu cộng nhập khẩu theo phần trăm GDP, quy về năm gốc {meta.baseYear}</title>{ticks.map(v=><g key={v}><line x1={left} x2={right} y1={yAt(v)} y2={yAt(v)} className={Math.abs(v-100)<.01?'baseline':'grid'}/><text x="8" y={yAt(v)+5}>{formatValue(v,0)}</text></g>)}{shownYears.map(y=><text key={y} x={xAt(years.indexOf(y))} y="292" textAnchor="middle">{y}</text>)}{series.map(c=><g key={c.id}>{pathSegments(c.values,yAt).map((points,index)=><polyline key={index} fill="none" stroke={c.color} strokeWidth="3" strokeDasharray={c.id==='SG'?'6 6':undefined} points={points}/>)}{c.values.map((v,index)=>v===null?null:<circle key={years[index]} cx={xAt(index)} cy={yAt(v)} r="3.5" fill={c.color}><title>{c.name}: {years[index]}, {formatValue(v,1)}</title></circle>)}</g>)}</svg><Legend series={series}/></>
+}
+
+export function RecoveryChart(){
+ const values=countries.map(country=>({country,value:recovery(country)}));
+ const max=Math.max(...values.map(item=>Math.abs(item.value??0)),1);
+ return <><div className="chart-top"><span>THAY ĐỔI ĐỘ MỞ THƯƠNG MẠI</span><span>{years.at(-1)} so với {meta.baseYear} · điểm chỉ số</span></div><div className="bars">{values.map(({country,value})=><div className="bar-row" key={country.id}><span>{country.name}</span><div><div className="bar" style={{width:`${Math.abs(value??0)/max*100}%`,background:country.color,opacity:value===null?.25:1}}/></div><b>{value===null?'—':`${value>=0?'+':''}${formatValue(value,1)}`}</b></div>)}</div><p className="chart-note">Mốc {meta.baseYear} = 100. Thứ tự hiển thị cố định, không phải bảng xếp hạng.</p></>
+}
+
+export function ScatterPlot(){
+ const points=countries.map(country=>({country,x:latestMetric(country,'manufacturing_pct'),y:latestMetric(country,'current_account_pct')})).filter(item=>item.x?.value!==null&&item.y?.value!==null);
+ const xValues=points.map(item=>item.x!.value as number),yValues=points.map(item=>item.y!.value as number);
+ const [xMin,xMax]=extent(xValues,0.15),[yMin,yMax]=extent(yValues,0.15);
+ const px=(value:number)=>left+((value-xMin)/(xMax-xMin))*(right-left),py=(value:number)=>bottom-((value-yMin)/(yMax-yMin))*(bottom-top);
+ return <><div className="chart-top"><span>CẤU TRÚC SẢN XUẤT & ĐỐI NGOẠI</span><span>Năm gần nhất có dữ liệu</span></div><svg viewBox="0 0 660 340" role="img" aria-label="Tỷ trọng chế biến chế tạo và cán cân vãng lai"><line className="grid" x1={left} x2={right} y1={bottom} y2={bottom}/><line className="grid" x1={left} x2={left} y1={top} y2={bottom}/><text x={left} y="18">Y: {indicators.current_account_pct.label} ({indicators.current_account_pct.unit})</text><text x="330" y="328" textAnchor="middle">X: {indicators.manufacturing_pct.label} ({indicators.manufacturing_pct.unit})</text><text x={left} y="282">{xMin}</text><text x={right} y="282" textAnchor="end">{xMax}</text><text x="12" y={top+5}>{yMax}</text><text x="12" y={bottom+5}>{yMin}</text>{points.map(({country,x,y})=><g key={country.id}><circle cx={px(x!.value as number)} cy={py(y!.value as number)} r="9" fill={country.color}><title>{country.name}: {x!.year} / {y!.year}</title></circle><text x={px(x!.value as number)} y={py(y!.value as number)-15} textAnchor="middle">{country.id==='SG'?'SG · benchmark':country.id}</text></g>)}</svg><Legend/><p className="chart-note">Hai chỉ tiêu có thể mang năm quan sát gần nhất khác nhau; biểu đồ chỉ mô tả, không suy luận quan hệ nhân quả.</p></>
+}
+
+export function SnapshotChart(){return <><div className="chart-top"><span>ẢNH CHỤP ĐỘ MỞ THƯƠNG MẠI</span><span>{years.at(-1)} · mốc {meta.baseYear} = 100</span></div><div className="snapshots">{countries.map(c=>{const latest=[...c.values].reverse().find(value=>value!==null);const [min,max]=extent(c.values);const sparkY=(value:number)=>32-((value-min)/(max-min))*28;return <div key={c.id}><span>{c.name}</span><strong style={{color:c.color}}>{formatValue(latest,1)}</strong><svg viewBox="0 0 100 35" aria-label={`Đường độ mở thương mại ${c.name}`}>{pathSegments(c.values,sparkY).map((points,index)=><polyline key={index} points={points.split(' ').map(point=>{const [x,y]=point.split(',').map(Number);return `${(x-left)/(right-left)*100},${y}`}).join(' ')} fill="none" stroke={c.color} strokeWidth="2"/>)}</svg></div>})}</div></>}

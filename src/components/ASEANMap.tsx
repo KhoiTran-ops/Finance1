@@ -19,8 +19,8 @@ export default function ASEANMap({onSelect}:{onSelect:(id:string)=>void}){
    <g className="earth-geography-labels"><text x="337" y="245">CHINA</text><text x="205" y="309">INDIA</text><text x="447" y="553">AUSTRALIA</text><text x="570" y="375">PACIFIC</text><text x="574" y="388">OCEAN</text><text x="192" y="469">INDIAN</text><text x="194" y="482">OCEAN</text></g>
    {markers.map(m=>{const c=countries.find(c=>c.id===m.id)!;return <g className={`globe-pin ${hover===m.id?'active':''}`} key={m.id} role="button" tabIndex={0} aria-label={`Mở ${c.name}`} onMouseEnter={()=>setHover(m.id)} onMouseLeave={()=>setHover(null)} onFocus={()=>setHover(m.id)} onBlur={()=>setHover(null)} onClick={()=>onSelect(m.id)} onKeyDown={e=>select(e,m.id)} style={{'--territory-color':m.color} as React.CSSProperties}><circle className="beacon-halo" cx={m.x} cy={m.y} r="11" fill={m.color} filter="url(#beacon)"/><circle cx={m.x} cy={m.y} r="4" fill="#fff"/><circle cx={m.x} cy={m.y} r="13" fill="transparent"/><text x={m.x+12} y={m.y+4}>{c.name}</text></g>})}
   </svg>
-  <aside className="asean-context"><span>◎ &nbsp; THE ASEAN CONTEXT</span><p>Năm nền kinh tế, những góc nhìn kết nối trong một khu vực.</p><small>Singapore · benchmark<br/>Dữ liệu tài chính đang chờ bổ sung.</small></aside>
+   <aside className="asean-context"><span>◎ &nbsp; THE ASEAN CONTEXT</span><p>Năm nền kinh tế, những góc nhìn kết nối trong một khu vực.</p><small>Singapore · benchmark<br/>Dữ liệu kinh tế từ ADB.</small></aside>
   <div className="globe-countries">{markers.map(m=><button key={m.id} onClick={()=>onSelect(m.id)} onMouseEnter={()=>setHover(m.id)} onMouseLeave={()=>setHover(null)} onFocus={()=>setHover(m.id)} onBlur={()=>setHover(null)}><span className="flag-orb" style={{'--territory-color':m.color} as React.CSSProperties}>{m.flag}</span><span>{countries.find(c=>c.id===m.id)?.name}</span></button>)}</div>
-  <div className="globe-footnote">BẢN ĐỒ MINH HỌA · RANH GIỚI KHÁI QUÁT · DEMO DATA</div>
+   <div className="globe-footnote">BẢN ĐỒ MINH HỌA · RANH GIỚI KHÁI QUÁT · ADB DATA</div>
  </div>
 }
