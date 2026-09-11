@@ -1,6 +1,6 @@
 # Cross-check
 
-Singapore GDP at current prices: ADB NGDP_XDC (SGD × 10^UNIT_MULT) versus World Bank NY.GDP.MKTP.CN (current LCU = SGD). This validates units and nominal source data, not real/per-capita measures.
+Singapore GDP at current prices: ADB NGDP_XDC (SGD × 10^UNIT_MULT) versus World Bank NY.GDP.MKTP.CN (current LCU = SGD). This validates units and nominal source data.
 
 Snapshot: 20260911T072427563129Z; World Bank lastupdated: 2026-07-13
 

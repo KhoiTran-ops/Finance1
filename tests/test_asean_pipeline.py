@@ -1,3 +1,4 @@
+import csv
 import importlib.util
 from pathlib import Path
 import unittest
@@ -8,18 +9,30 @@ p = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(p)
 
 class MetricsTests(unittest.TestCase):
-    def test_log_growth(self):
-        self.assertAlmostEqual(p.log_growth(110, 100), 9.5310179804)
-        self.assertTrue(np.isnan(p.log_growth(110, 0)))
-        self.assertTrue(np.isnan(p.log_growth(np.nan, 100)))
+    def test_real_gdp_per_capita_pipeline_is_retired(self):
+        self.assertTrue({'NGDP_R_XDC', 'LP_PE_NUM_MOP'}.isdisjoint(p.SERIES))
+        self.assertNotIn('real_gdp_pc', p.CORE)
 
-    def test_recovery_is_compounded_level_change(self):
-        self.assertAlmostEqual(p.recovery(100*.9*1.2, 100), 8)
-        self.assertTrue(np.isnan(p.recovery(100, 0)))
-
-    def test_strict_average(self):
-        self.assertEqual(p.strict_average([1,2,6]), 3)
-        self.assertTrue(np.isnan(p.strict_average([1,np.nan,6])))
+        forbidden = {
+            'real_gdp_lcu', 'population', 'real_gdp_pc', 'gdp_pc_growth',
+            'gdp_pc_index_2006', 'cumulative_recovery_pct',
+        }
+        root = Path(__file__).resolve().parents[1]
+        for relative_path in (
+            'data/processed/asean_comparison.csv',
+            'data/processed/p8_timeseries.csv',
+        ):
+            with (root / relative_path).open(encoding='utf-8', newline='') as source:
+                header = next(csv.reader(source))
+            self.assertTrue(forbidden.isdisjoint(header), relative_path)
+        for relative_path, field in (
+            ('data/processed/normalized_observations.csv', 'indicator'),
+            ('metadata/data_dictionary.csv', 'column'),
+        ):
+            with (root / relative_path).open(encoding='utf-8', newline='') as source:
+                values = {row[field] for row in csv.DictReader(source)}
+            self.assertTrue(forbidden.isdisjoint(values), relative_path)
+        self.assertFalse((root / 'data/processed/p8_covid_summary.csv').exists())
 
     def test_numeric(self):
         self.assertEqual(p.numeric('0'), 0)

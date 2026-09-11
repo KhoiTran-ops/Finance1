@@ -21,14 +21,13 @@ COUNTRIES = {'VIE': ('VNM', 'Viet Nam', 'VND'), 'THA': ('THA', 'Thailand', 'THB'
              'SIN': ('SGP', 'Singapore', 'SGD')}
 SERIES = {
  'NGDP_XDC': ('nominal_gdp_lcu', 'GDP at current prices', 'local_currency', 'current'),
- 'NGDP_R_XDC': ('real_gdp_lcu', 'GDP at constant prices', 'local_currency', 'constant'),
  'NGDPVA_ISIC4_C_XDC': ('manufacturing_lcu', 'Manufacturing at current prices', 'local_currency', 'current'),
  'NEGS_XGDP_PS': ('exports_pct', 'Exports of goods and services', 'percent_gdp', 'current'),
  'NIGS_XGDP_PS': ('imports_pct', 'Imports of goods and services', 'percent_gdp', 'current'),
- 'LP_PE_NUM_MOP': ('population', 'Total population', 'persons', 'not_applicable'),
  'BCA_BP6_XGDP_PS': ('current_account_pct', 'Current account balance', 'percent_gdp', 'current'),
 }
-CORE = ['real_gdp_pc', 'manufacturing_pct', 'exports_pct', 'imports_pct', 'current_account_pct', 'reserves_months']
+RETIRED_SOURCE_INDICATORS = {'NGDP_R_XDC', 'LP_PE_NUM_MOP'}
+CORE = ['manufacturing_pct', 'exports_pct', 'imports_pct', 'current_account_pct', 'reserves_months']
 
 def save_csv(frame, path):
     path = ROOT / path
@@ -64,7 +63,7 @@ def fetch(start=2005, end=None):
     base = 'https://kidb.adb.org/api'
     for label, path in [('indicators', 'codelist/ADB/CL_KIDB_INDICATORS'), ('countries', 'codelist/ADB/CL_ECONOMY_CODES'), ('statuses', 'codelist/all/all')]:
         get(label + '.json', f'{base}/v5/sdmx/structure/{path}/+?format=sdmx-json')
-    groups = {'DF_NA': list(SERIES)[:5], 'DF_PPSI': ['LP_PE_NUM_MOP'], 'DF_GLOB_BOP': ['BCA_BP6_XGDP_PS']}
+    groups = {'DF_NA': list(SERIES)[:4], 'DF_GLOB_BOP': ['BCA_BP6_XGDP_PS']}
     for flow, codes in groups.items():
         key = 'A.' + '+'.join(codes) + '.' + '+'.join(COUNTRIES)
         url = f'{base}/v5/sdmx/data/ADB,{flow}/{key}?startPeriod={start}&format=sdmx-csv'
@@ -105,15 +104,6 @@ def combine_status(*states):
             return state
     return 'observed'
 
-def strict_average(values):
-    return float(np.mean(values)) if len(values) and all(pd.notna(v) for v in values) else np.nan
-
-def log_growth(current, previous):
-    return 100 * np.log(current / previous) if pd.notna(current) and pd.notna(previous) and current > 0 and previous > 0 else np.nan
-
-def recovery(current, baseline):
-    return 100 * (current / baseline - 1) if pd.notna(current) and pd.notna(baseline) and baseline > 0 else np.nan
-
 def build(snapshot=None):
     if snapshot is None:
         snapshot = json.loads((ROOT / 'data/raw/latest.json').read_text())['snapshot']
@@ -131,6 +121,8 @@ def build(snapshot=None):
         raw = pd.read_csv(file, dtype=str, keep_default_na=False)
         for idx, r in raw.iterrows():
             try:
+                if r['INDICATOR'] in RETIRED_SOURCE_INDICATORS:
+                    continue
                 if r['ECONOMY_CODE'] not in COUNTRIES or r['INDICATOR'] not in SERIES or r['FREQ'] != 'A':
                     raise ValueError('Unrecognized country/indicator/frequency')
                 country, name, currency = COUNTRIES[r['ECONOMY_CODE']]
@@ -141,8 +133,6 @@ def build(snapshot=None):
                     raise ValueError('Unexpected currency: ' + r['UNIT'])
                 if unit == 'percent_gdp' and (r['UNIT'] not in ('%', 'PERCENT', 'PC', 'PT', 'PCT', 'PCT_GDP') or mult != 0):
                     raise ValueError('Unexpected percent unit/multiplier: ' + r['UNIT'] + '/' + str(mult))
-                if unit == 'persons' and r['UNIT'].lower() not in ('persons', 'person', 'people', 'number', 'num'):
-                    raise ValueError('Unexpected population unit: ' + r['UNIT'])
                 rows.append(dict(country=country, country_name=name, indicator=code, indicator_name=label,
                     year=int(r['TIME_PERIOD']), frequency='A', value=value * 10.0 ** mult,
                     unit=currency if unit == 'local_currency' else unit, price_basis=price,
@@ -184,41 +174,15 @@ def build(snapshot=None):
             row = {'country': country, 'country_name': names[country], 'year': year, 'frequency': 'A'}
             for indicator in [s[0] for s in SERIES.values()] + ['reserves_months']:
                 row[indicator], row[indicator+'_status'] = cell(country, indicator, year)
-            for target, numerator, denominator, scale in [('real_gdp_pc','real_gdp_lcu','population',1), ('manufacturing_pct','manufacturing_lcu','nominal_gdp_lcu',100)]:
-                a, b = row[numerator], row[denominator]
-                row[target] = scale*a/b if pd.notna(a) and pd.notna(b) and b > 0 else np.nan
-                row[target+'_status'] = combine_status(row[numerator+'_status'],row[denominator+'_status']) if pd.notna(row[target]) else 'missing'
-            row['real_gdp_pc_unit'] = next(v[2] for v in COUNTRIES.values() if v[0] == country) + '/person, constant prices'
-            gdp = lookup.get((country,'real_gdp_lcu',year))
-            row['real_gdp_base_year'] = gdp.base_year if gdp else ''
+            a, b = row['manufacturing_lcu'], row['nominal_gdp_lcu']
+            row['manufacturing_pct'] = 100*a/b if pd.notna(a) and pd.notna(b) and b > 0 else np.nan
+            row['manufacturing_pct_status'] = combine_status(row['manufacturing_lcu_status'], row['nominal_gdp_lcu_status']) if pd.notna(row['manufacturing_pct']) else 'missing'
             row['trade_openness'] = row['exports_pct'] + row['imports_pct']
             row['trade_balance'] = row['exports_pct'] - row['imports_pct']
             for metric in ['trade_openness','trade_balance']:
                 row[metric+'_status'] = combine_status(row['exports_pct_status'],row['imports_pct_status'])
-            row['crisis'] = int(year in (2008,2009,2020))
             panel.append(row)
     p = pd.DataFrame(panel).sort_values(['country','year'])
-    for country, g in p.groupby('country'):
-        byyear = g.set_index('year')
-        def get(y, col):
-            return byyear.at[y,col] if y in byyear.index else np.nan
-        for idx in g.index:
-            year = int(p.at[idx,'year'])
-            base = get(year,'real_gdp_base_year')
-            def compatible(y):
-                return pd.notna(base) and str(base) != '' and get(y,'real_gdp_base_year') == base
-            p.at[idx,'gdp_pc_growth'] = log_growth(get(year,'real_gdp_pc'),get(year-1,'real_gdp_pc')) if compatible(year-1) else np.nan
-            p.at[idx,'gdp_pc_index_2006'] = 100 + recovery(get(year,'real_gdp_pc'),get(2006,'real_gdp_pc')) if compatible(2006) else np.nan
-            p.at[idx,'cumulative_recovery_pct'] = recovery(get(year,'real_gdp_pc'),get(2019,'real_gdp_pc')) if year>=2020 and compatible(2019) else np.nan
-            p.at[idx,'manufacturing_lag1'] = get(year-1,'manufacturing_pct')
-            p.at[idx,'openness_lag1'] = get(year-1,'trade_openness')
-            p.at[idx,'growth_status'] = combine_status(get(year,'real_gdp_pc_status'), get(year-1,'real_gdp_pc_status')) if pd.notna(p.at[idx,'gdp_pc_growth']) else 'missing'
-    p['model_eligible'] = (p.growth_status == 'observed') & p.gdp_pc_growth.notna()
-    for country, g in p.groupby('country'):
-        for idx in g.index:
-            year = p.at[idx,'year']
-            prev = g[g.year == year-1]
-            p.at[idx,'model_eligible'] = bool(p.at[idx,'model_eligible'] and not prev.empty and prev.iloc[0].manufacturing_pct_status == 'observed' and prev.iloc[0].trade_openness_status == 'observed')
     save_csv(p, 'data/processed/asean_comparison.csv')
     coverage=[]
     for row in p.to_dict('records'):
@@ -230,43 +194,19 @@ def build(snapshot=None):
     common_years = [int(y) for y, available in common.items() if available]
     observed = cov.assign(ok=lambda d: d.available & d.status.eq('observed')).groupby('year').ok.all()
     observed_years = [int(y) for y, ok in observed.items() if ok]
-    summaries=[]
-    for country,g in p.groupby('country'):
-        d=g.set_index('year')
-        def growth(y):
-            return d.at[y,'gdp_pc_growth'] if y in d.index and d.at[y,'growth_status']=='observed' else np.nan
-        pre=strict_average([growth(y) for y in (2017,2018,2019)])
-        post=strict_average([growth(y) for y in (2021,2022,2023)])
-        valid=d[(d.real_gdp_pc_status=='observed') & d.cumulative_recovery_pct.notna()]
-        latest=int(valid.index.max()) if len(valid) else None
-        summaries.append(dict(country=country,pre_covid_growth_avg=pre,growth_2020=growth(2020),
-            shock_2020_pp=growth(2020)-pre,post_covid_growth_avg=post,
-            recovery_year=latest,cumulative_recovery_pct=d.at[latest,'cumulative_recovery_pct'] if latest else np.nan))
-    save_csv(pd.DataFrame(summaries),'data/processed/p8_covid_summary.csv')
-    save_csv(p[['country','country_name','year'] + CORE + ['trade_openness','gdp_pc_growth','gdp_pc_index_2006','cumulative_recovery_pct'] + [x+'_status' for x in CORE]],'data/processed/p8_timeseries.csv')
-    outliers = p[(p.gdp_pc_growth.abs()>30) | (p.manufacturing_pct<0) | (p.manufacturing_pct>100) | (p.reserves_months<0)]
+    save_csv(p[['country','country_name','year'] + CORE + ['trade_openness'] + [x+'_status' for x in CORE]],'data/processed/p8_timeseries.csv')
+    outliers = p[(p.manufacturing_pct<0) | (p.manufacturing_pct>100) | (p.reserves_months<0)]
     save_csv(outliers,'reports/outliers.csv')
     dictionary=[]
-    formulas={'real_gdp_pc':'real_gdp_lcu / population; within-country levels only', 'manufacturing_pct':'100 * manufacturing_lcu / nominal_gdp_lcu',
+    formulas={'manufacturing_pct':'100 * manufacturing_lcu / nominal_gdp_lcu',
       'trade_openness':'exports_pct + imports_pct','trade_balance':'exports_pct - imports_pct',
-      'gdp_pc_growth':'100 * ln(real_gdp_pc[t] / real_gdp_pc[t-1]); same nonempty base year',
-      'gdp_pc_index_2006':'100 * real_gdp_pc[t] / real_gdp_pc[2006]; same nonempty base year',
-      'cumulative_recovery_pct':'100 * (real_gdp_pc[t] / real_gdp_pc[2019] - 1); t>=2020; same nonempty base year',
-      'manufacturing_lag1':'manufacturing_pct at exact t-1','openness_lag1':'trade_openness at exact t-1',
-      'crisis':'1 if year in {2008,2009,2020}; else 0','growth_status':'Conservative combined status of t and t-1 real GDP per capita',
-      'model_eligible':'Observed current/lag GDP and lag manufacturing/openness; complete values',
-      'pre_covid_growth_avg':'Mean growth 2017,2018,2019; all 3 observed required',
-      'post_covid_growth_avg':'Mean growth 2021,2022,2023; all 3 observed required',
-      'shock_2020_pp':'growth_2020 - pre_covid_growth_avg (percentage points)',
-      'growth_2020':'Observed GDP per capita log growth in 2020',
-      'recovery_year':'Latest available observed recovery endpoint, per country; not common cutoff'}
-    for column in list(p.columns)+list(pd.DataFrame(summaries).columns):
+    }
+    for column in p.columns:
         if any(x['column']==column for x in dictionary): continue
         source='World Bank WDI FI.RES.TOTL.MO' if column.startswith('reserves_months') else 'ADB / derived; see normalized_observations.csv'
         unit='metadata'
         if column in CORE or column in formulas:
             unit='percent / percentage points' if ('pct' in column or 'growth' in column or 'openness' in column or 'balance' in column or 'shock' in column) else 'see formula'
-        if column=='real_gdp_pc': unit='constant local currency per person; NOT cross-country comparable levels'
         if column=='reserves_months': unit='months of imports'
         dictionary.append(dict(column=column,unit=unit,formula_or_definition=formulas.get(column, 'Source field or status; see normalized source lineage'),source=source,missing_rule='Blank CSV = missing; no imputation; unknown status is not observed'))
     save_csv(pd.DataFrame(dictionary),'metadata/data_dictionary.csv')
@@ -277,7 +217,7 @@ def build(snapshot=None):
         if adb and r['value'] is not None:
             comparisons.append({'year':int(r['date']),'adb_sgd':adb.value,'wb_sgd':r['value'],'difference_pct':100*(adb.value/r['value']-1)})
     save_csv(pd.DataFrame(comparisons),'reports/cross_check_values.csv')
-    report = '# Cross-check\n\nSingapore GDP at current prices: ADB NGDP_XDC (SGD × 10^UNIT_MULT) versus World Bank NY.GDP.MKTP.CN (current LCU = SGD). This validates units and nominal source data, not real/per-capita measures.\n\n'
+    report = '# Cross-check\n\nSingapore GDP at current prices: ADB NGDP_XDC (SGD × 10^UNIT_MULT) versus World Bank NY.GDP.MKTP.CN (current LCU = SGD). This validates units and nominal source data.\n\n'
     report += 'Snapshot: '+snapshot+'; World Bank lastupdated: '+str(wbcheck[0].get('lastupdated'))+'\n\n'
     report += '| Year | ADB SGD | WB SGD | Difference % |\n|---|---:|---:|---:|\n'
     for r in comparisons: report+=f"| {r['year']} | {r['adb_sgd']:.0f} | {r['wb_sgd']:.0f} | {r['difference_pct']:.6f} |\n"
@@ -288,25 +228,18 @@ def build(snapshot=None):
 Raw snapshot: {snapshot}. SHA256 verified for every downloaded response.
 Normalized rows: {len(clean)}. Panel rows: {len(p)}. Rejected rows: {len(issues)}.
 Duplicate rows: {len(duplicates)} (fatal if nonzero). Outlier flags: {len(outliers)} (retained, not winsorized).
-Common years across 6 indicators and 5 countries, regardless of status: {common_years}.
-Common strictly observed years across all 6 indicators: {observed_years}.
+Common years across 5 indicators and 5 countries, regardless of status: {common_years}.
+Common strictly observed years across all 5 indicators: {observed_years}.
 Status mapping from downloaded ADB codelists: {statuses}.
 
 ## Rules
 - Blank = missing. No interpolation, carry forward, zero fill, or forecast synthesis.
 - World Bank reserves are explicitly supplemental. Missing observation status stays unknown.
 - ADB UNIT_MULT is applied exactly once. Local currency is never relabeled USD.
-- Real GDP per capita is constant-price GDP / population, not current PPP GDP.
-- Cross-country absolute GDPpc comparisons/catch-up gaps are disabled: units and base years differ.
-- Growth/index/recovery require the same nonempty base year; structural breaks can remain in footnotes and need review.
-- Population definitions may differ (resident/total); inspect source footnotes before inference.
-- Post-COVID window is explicitly 2021–2023; all years required. Shock = 2020 log growth minus 2017–2019 mean.
-- Cumulative recovery is level change versus 2019, not a causal estimate or recovery of lost trend.
-- Model eligibility uses observed inputs only. Supplementary unknown reserves do not automatically discard the core model.
 - Coverage matrix includes every requested country/indicator/year, including missing cells.
 
 ## Handoff
-- P8 files: data/processed/p8_timeseries.csv and p8_covid_summary.csv.
+- P8 file: data/processed/p8_timeseries.csv.
 - CSV UTF-8, comma delimiter, stable column names; nulls are empty strings. Treat nulls as null, never zero.
 - P4–P8 human confirmation: PENDING. No analyst sessions were provided.
 - Website display cross-check: PENDING; no P8 page/URL supplied.
