@@ -67,6 +67,70 @@
   line-height: 1.6;
 }
 
+.chart-tooltip {
+  position: fixed;
+  z-index: 100;
+  width: max-content;
+  max-width: 250px;
+  padding: 11px 13px;
+  border: 1px solid #3b6278;
+  background: #071b2e;
+  box-shadow: 0 10px 28px #00111e47;
+  color: #dcecf4;
+  pointer-events: none;
+}
+
+.chart-tooltip strong,
+.chart-tooltip span {
+  display: block;
+}
+
+.chart-tooltip strong {
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-size: 0.8125rem;
+}
+
+.chart-tooltip span {
+  color: #abc5d4;
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
+
+.interactive-point,
+.interactive-bar,
+.interactive-snapshot {
+  cursor: crosshair;
+}
+
+.interactive-point {
+  transition: r 120ms ease, stroke-width 120ms ease;
+}
+
+.interactive-point:hover,
+.interactive-point:focus {
+  r: 7px;
+  stroke: #ffffff;
+  stroke-width: 2px;
+  outline: none;
+}
+
+.interactive-bar:focus,
+.interactive-snapshot:focus {
+  outline: 2px solid #bc7d11;
+  outline-offset: 4px;
+}
+
+.interactive-bar:hover .bar,
+.interactive-bar:focus .bar {
+  filter: saturate(1.2) brightness(1.08);
+}
+
+.interactive-snapshot:hover,
+.interactive-snapshot:focus {
+  background: #f8f2df;
+}
+
 @media (max-width: 760px) {
   .comparison-insight {
     display: block;
@@ -74,5 +138,15 @@
 
   .comparison-insight p {
     margin-top: 4px;
+  }
+
+  .chart-tooltip {
+    max-width: min(250px, calc(100vw - 20px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-point {
+    transition: none;
   }
 }
