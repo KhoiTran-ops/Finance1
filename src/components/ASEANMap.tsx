@@ -2,10 +2,18 @@ import {useState} from 'react';
 import geography from '../data/globe-paths.json';
 import {countries} from '../data/model';
 const markers=[{id:'VN',x:350,y:302,color:'#ff7467',flag:'🇻🇳'},{id:'TH',x:324,y:322,color:'#55dfff',flag:'🇹🇭'},{id:'MY',x:328,y:382,color:'#ffcf64',flag:'🇲🇾'},{id:'SG',x:338,y:395,color:'#c596ff',flag:'🇸🇬'},{id:'ID',x:406,y:418,color:'#66ffc2',flag:'🇮🇩'}];
+const countryRoles=[
+ {id:'VN',name:'Việt Nam',role:'Nền kinh tế bắt kịp nhanh, công nghiệp hóa muộn, dựa nhiều vào FDI và xuất khẩu.'},
+ {id:'TH',name:'Thái Lan',role:'Có nền công nghiệp và xuất khẩu lâu đời nhưng tăng trưởng chậm lại.'},
+ {id:'ID',name:'Indonesia',role:'Thị trường nội địa lớn, ít phụ thuộc xuất khẩu hơn.'},
+ {id:'MY',name:'Malaysia',role:'Nền kinh tế công nghiệp – xuất khẩu ở mức phát triển trung bình cao.'},
+ {id:'SG',name:'Singapore',role:'Trung tâm thương mại, tài chính và công nghệ; chuẩn phát triển.'},
+];
 export default function ASEANMap({onSelect}:{onSelect:(id:string)=>void}){
  const [hover,setHover]=useState<string|null>(null);
  const select=(e:React.KeyboardEvent,id:string)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(id)}};
- return <div className="globe-experience">
+ return <>
+ <div className="globe-experience">
   <div className="globe-copy"><span>FIVE ECONOMIES.<br/>ONE REGION.<br/>DIFFERENT JOURNEYS.</span><div><h1>EXPLORE <br/><strong>ASEAN</strong></h1><p>Chọn một quốc gia để khám phá<br/>câu chuyện và dashboard tài chính.</p></div></div>
   <svg className="earth-globe" viewBox="0 0 760 710" aria-label="Quả địa cầu tương tác, tập trung vào châu Á">
    <defs><radialGradient id="ocean" cx="38%" cy="26%"><stop stopColor="#174767"/><stop offset=".52" stopColor="#08263b"/><stop offset=".91" stopColor="#031423"/><stop offset="1" stopColor="#18628a"/></radialGradient><radialGradient id="earth-light" cx="30%" cy="15%" r="85%"><stop stopColor="#a1e2ff" stopOpacity=".23"/><stop offset=".5" stopColor="#041421" stopOpacity="0"/><stop offset="1" stopColor="#00101e" stopOpacity=".45"/></radialGradient><filter id="atmosphere" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="12"/></filter><filter id="beacon" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter><clipPath id="sphere-clip"><circle cx="380" cy="340" r="302"/></clipPath></defs>
@@ -23,4 +31,21 @@ export default function ASEANMap({onSelect}:{onSelect:(id:string)=>void}){
   <div className="globe-countries">{markers.map(m=><button key={m.id} onClick={()=>onSelect(m.id)} onMouseEnter={()=>setHover(m.id)} onMouseLeave={()=>setHover(null)} onFocus={()=>setHover(m.id)} onBlur={()=>setHover(null)}><span className="flag-orb" style={{'--territory-color':m.color} as React.CSSProperties}>{m.flag}</span><span>{countries.find(c=>c.id===m.id)?.name}</span></button>)}</div>
    <div className="globe-footnote">BẢN ĐỒ MINH HỌA · RANH GIỚI KHÁI QUÁT · ADB DATA</div>
  </div>
+ <section className="country-rationale" aria-labelledby="country-rationale-title">
+  <div className="rationale-heading">
+   <span>01 / PHẠM VI PHÂN TÍCH</span>
+   <h2 id="country-rationale-title">Vì sao chọn 5 quốc gia này?</h2>
+   <p>Năm nền kinh tế đại diện cho những cấu trúc và quỹ đạo phát triển khác nhau trong ASEAN.</p>
+  </div>
+  <div className="rationale-table" role="table" aria-label="Vai trò của năm quốc gia trong câu chuyện">
+   <div className="rationale-row rationale-header" role="row">
+    <span role="columnheader">Quốc gia</span><span role="columnheader">Vai trò trong câu chuyện</span>
+   </div>
+   {countryRoles.map((country,index)=><div className="rationale-row" role="row" key={country.id}>
+    <div className="rationale-country" role="cell"><button onClick={()=>onSelect(country.id)} aria-label={`Khám phá ${country.name}`}><i>{String(index+1).padStart(2,'0')}</i>{country.name}<span aria-hidden="true">↗</span></button></div>
+    <p role="cell">{country.role}</p>
+   </div>)}
+  </div>
+ </section>
+ </>
 }

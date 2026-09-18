@@ -1,4 +1,4 @@
-import {countries,formatValue,indicators,latestMetric,meta,recovery,years,type Country} from '../data/model';
+import {baseYearIndex,countries,formatValue,indicators,latestMetric,meta,recovery,years,type Country} from '../data/model';
 
 const left=52,right=610,top=28,bottom=258;
 const xAt=(index:number)=>left+(index*Math.max(1,right-left))/Math.max(1,years.length-1);
@@ -30,7 +30,23 @@ export function LineChart({country}:{country?:Country}){
 export function RecoveryChart(){
  const values=countries.map(country=>({country,value:recovery(country)}));
  const max=Math.max(...values.map(item=>Math.abs(item.value??0)),1);
- return <><div className="chart-top"><span>THAY ĐỔI ĐỘ MỞ THƯƠNG MẠI</span><span>{years.at(-1)} so với {meta.baseYear} · điểm chỉ số</span></div><div className="bars">{values.map(({country,value})=><div className="bar-row" key={country.id}><span>{country.name}</span><div><div className="bar" style={{width:`${Math.abs(value??0)/max*100}%`,background:country.color,opacity:value===null?.25:1}}/></div><b>{value===null?'—':`${value>=0?'+':''}${formatValue(value,1)}`}</b></div>)}</div><p className="chart-note">Mốc {meta.baseYear} = 100. Thứ tự hiển thị cố định, không phải bảng xếp hạng.</p></>
+ const latestIndex=years.length-1;
+ const signed=(value:number)=>`${value>=0?'+':''}${formatValue(value,1)} điểm %`;
+ const insight=(country:Country)=>{
+  const exportBase=country.metrics.exports_pct[baseYearIndex].value;
+  const exportLatest=country.metrics.exports_pct[latestIndex].value;
+  const importBase=country.metrics.imports_pct[baseYearIndex].value;
+  const importLatest=country.metrics.imports_pct[latestIndex].value;
+  const indexLatest=country.values[latestIndex];
+  if(exportBase===null||exportLatest===null||importBase===null||importLatest===null||indexLatest===null)return 'Chưa đủ dữ liệu để giải thích thay đổi của chỉ số.';
+  const exportDelta=signed(exportLatest-exportBase),importDelta=signed(importLatest-importBase),index=formatValue(indexLatest,1);
+  if(country.id==='VN')return `Xuất khẩu (${exportDelta}) và nhập khẩu (${importDelta}) cùng tăng mạnh theo tỷ trọng GDP, đưa chỉ số lên ${index}.`;
+  if(country.id==='ID')return `Xuất khẩu (${exportDelta}) và nhập khẩu (${importDelta}) đều giảm tỷ trọng so với GDP, nên chỉ số còn ${index}.`;
+  if(country.id==='TH')return `Xuất khẩu gần như đi ngang (${exportDelta}) trong khi nhập khẩu giảm (${importDelta}), giữ chỉ số sát mốc gốc ở ${index}.`;
+  if(country.id==='MY')return `Xuất khẩu (${exportDelta}) là phần chính kéo chỉ số xuống ${index}; nhập khẩu cũng giảm (${importDelta}).`;
+  return `Xuất khẩu (${exportDelta}) và nhập khẩu (${importDelta}) đều giảm tỷ trọng, khiến chỉ số còn ${index}, dù độ mở tuyệt đối vẫn rất cao.`;
+ };
+ return <><div className="chart-top"><span>THAY ĐỔI ĐỘ MỞ THƯƠNG MẠI</span><span>{years.at(-1)} so với {meta.baseYear} · điểm chỉ số</span></div><div className="bars">{values.map(({country,value})=><div className="bar-row" key={country.id}><span>{country.name}</span><div><div className="bar" style={{width:`${Math.abs(value??0)/max*100}%`,background:country.color,opacity:value===null?.25:1}}/></div><b>{value===null?'—':`${value>=0?'+':''}${formatValue(value,1)}`}</b></div>)}</div><p className="chart-note">Mốc {meta.baseYear} = 100. Thứ tự hiển thị cố định, không phải bảng xếp hạng.</p><section className="comparison-insights" aria-labelledby="comparison-insights-title"><h3 id="comparison-insights-title">Vì sao chỉ số thay đổi?</h3>{countries.map(country=><div className="comparison-insight" key={country.id}><strong style={{color:country.color}}>{country.name}</strong><p>{insight(country)}</p></div>)}</section></>
 }
 
 export function ScatterPlot(){

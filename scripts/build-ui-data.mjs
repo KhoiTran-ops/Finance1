@@ -6,7 +6,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const input = path.join(root, 'data', 'processed', 'p8_timeseries.csv');
 const output = path.join(root, 'src', 'data', 'adb-data.json');
 const startYear = 2012;
-const baseYear = 2019;
+const baseYear = 2012;
 
 const countryDefinitions = {
   VNM: { id: 'VN', name: 'Việt Nam', color: '#a37219' },

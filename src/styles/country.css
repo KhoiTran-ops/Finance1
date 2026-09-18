@@ -1,0 +1,78 @@
+/* Country-slide copy uses an explicit Vietnamese-safe system font stack. */
+.country-scene .description {
+  max-width: 500px;
+  color: #55584f;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+}
+
+.scene-surprise .description {
+  max-width: 520px;
+  color: #55584f;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 760px) {
+  .country-scene .description {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .scene-surprise .description {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+}
+
+.comparison-insights {
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.comparison-insights h3 {
+  margin: 0;
+  padding: 18px 0 12px;
+  color: #6f5727;
+  font: 600 0.75rem/1.4 Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparison-insight {
+  display: grid;
+  grid-template-columns: minmax(145px, 0.38fr) minmax(0, 1fr);
+  gap: 20px;
+  padding: 13px 0;
+  border-top: 1px solid #e7e2d2;
+}
+
+.comparison-insight strong {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.comparison-insight p {
+  margin: 0;
+  color: #696a60;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .comparison-insight {
+    display: block;
+  }
+
+  .comparison-insight p {
+    margin-top: 4px;
+  }
+}
